@@ -6,6 +6,7 @@ public class Body{
 	public double mass;
 	public String imgFileName;
 	public static final double g = 6.67e-11;
+	
 
 	public Body(double xP,double yp,double xV,double yV,double m,String img){
 		xxPos=xP;
