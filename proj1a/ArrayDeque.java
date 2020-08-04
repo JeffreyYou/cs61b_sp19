@@ -34,13 +34,14 @@ public class ArrayDeque<T>{
             nextFisrt = 0;
             nextLast = 0;
         }
-        //if there is no item added first, addOne(nextFirst)==0
+        //if there is no item added through addFirst, addOne(nextFirst)==0
         if(addOne(nextFisrt)<=minusOne(nextLast)){
             System.arraycopy(array,addOne(nextFisrt),aTemp,0,minusOne(nextLast)-addOne(nextFisrt)+1);
             nextFisrt = aTemp.length-1;
             /*nextLast dose not change*/
 
         }
+        //several items have been added through addFirst
         else{
             System.arraycopy(array,addOne(nextFisrt),aTemp,0,array.length-addOne(nextFisrt));
             System.arraycopy(array,0,aTemp,array.length-addOne(nextFisrt),minusOne(nextLast) + 1 );
